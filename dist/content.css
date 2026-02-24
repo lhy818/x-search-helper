@@ -1,0 +1,113 @@
+/* X Search Helper 内容样式 */
+
+/* 搜索框增强样式 */
+.x-search-helper-enhanced {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%) !important;
+  border-left: 3px solid #667eea !important;
+}
+
+/* 搜索结果页面提示 */
+.x-search-helper-tip {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  max-width: 300px;
+  animation: slideUp 0.5s ease-out;
+  display: none;
+}
+
+.x-search-helper-tip.show {
+  display: block;
+}
+
+.x-search-helper-tip h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.x-search-helper-tip p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.x-search-helper-tip .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.x-search-helper-tip .close-btn:hover {
+  opacity: 1;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 搜索结果页面样式增强 */
+[data-testid="primaryColumn"] [role="tablist"] {
+  position: relative;
+}
+
+[data-testid="primaryColumn"] [role="tablist"]::after {
+  content: '💡 选择"Latest"查看最新结果';
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #6c757d;
+  border: 1px solid #e9ecef;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .x-search-helper-tip {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  [data-testid="primaryColumn"] [role="tablist"]::after {
+    top: -40px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}

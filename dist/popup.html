@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Search Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 X Search Helper</h1>
+      <p class="subtitle">高级搜索模板，一键找到爆款内容</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="custom-keyword" placeholder="输入关键词 (可选)" />
+      <button id="apply-search">应用到当前页面</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="chinese">中文圈</button>
+      <button class="tab-btn" data-tab="japanese">日区</button>
+      <button class="tab-btn" data-tab="global">全球/美区</button>
+      <button class="tab-btn" data-tab="custom">自定义</button>
+    </div>
+
+    <div class="tab-content active" id="chinese-tab">
+      <div class="template-list">
+        <!-- 中文圈模板 -->
+        <div class="template-card" data-template="chinese-1">
+          <h3>4小时内高质量热议</h3>
+          <code>lang:zh-cn min_faves:300 within_time:4h</code>
+          <p>4小时内正在爆发的高质量热议</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="chinese-2">
+          <h3>24小时万赞神贴</h3>
+          <code>lang:zh-cn min_faves:10000 -is:retweet</code>
+          <p>24小时内华语圈最顶级的万赞神贴</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="chinese-3">
+          <h3>中文AI圈爆款</h3>
+          <code>"AI" OR "提示词" OR "大模型" lang:zh-cn min_faves:500</code>
+          <p>捕捉中文AI圈当下的爆款内容</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="chinese-4">
+          <h3>12小时带图热门</h3>
+          <code>filter:images lang:zh-cn min_faves:500 within_time:12h</code>
+          <p>锁定12小时内带图的中文热门帖子</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="chinese-5">
+          <h3>高质量长贴原创</h3>
+          <code>"关键词" -filter:replies -is:retweet min_faves:100</code>
+          <p>排除回复，只看高质量的长贴原创</p>
+          <button class="use-btn">使用</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="japanese-tab">
+      <div class="template-list">
+        <!-- 日区模板 -->
+        <div class="template-card" data-template="japanese-1">
+          <h3>1小时刚起飞高赞贴</h3>
+          <code>lang:ja min_faves:500 within_time:1h -is:retweet</code>
+          <p>日区1小时内刚起飞的高赞贴（蓝V抢热评神技）</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="japanese-2">
+          <h3>4小时最高视觉内容</h3>
+          <code>lang:ja min_faves:2000 filter:images within_time:4h</code>
+          <p>捕捉日本4小时内点赞最高的视觉/图片内容</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="japanese-3">
+          <h3>社会民生槽点</h3>
+          <code>"なにか" OR "最高" lang:ja min_faves:3000</code>
+          <p>寻找日区当前的社会民生槽点（极易产生共鸣）</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="japanese-4">
+          <h3>24小时二次元动向</h3>
+          <code>#ポケモン OR #イラスト lang:ja min_faves:5000 within_time:24h</code>
+          <p>监控日区24小时内最热门的二次元动向</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="japanese-5">
+          <h3>投资理财高质量讨论</h3>
+          <code>"資産運用" OR "新NISA" lang:ja min_faves:500</code>
+          <p>锁定日本投资/理财领域的高质量讨论</p>
+          <button class="use-btn">使用</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="global-tab">
+      <div class="template-list">
+        <!-- 全球/美区模板 -->
+        <div class="template-card" data-template="global-1">
+          <h3>12小时AI顶级神贴</h3>
+          <code>"AI" OR "ChatGPT" lang:en min_faves:5000 within_time:12h</code>
+          <p>捕捉全球AI圈12小时内的顶级神贴</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="global-2">
+          <h3>4小时疯传高权重视频</h3>
+          <code>lang:en min_faves:1000 filter:native_video within_time:4h</code>
+          <p>寻找美区4小时内正在疯传的高权重视频</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="global-3">
+          <h3>金融投资高赞观点</h3>
+          <code>"Investing" OR "SPY" lang:en min_faves:2000</code>
+          <p>搜集全球金融/投资大V的最新高赞观点</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="global-4">
+          <h3>4小时全球最火原创</h3>
+          <code>"the" OR "の" OR "了" min_faves:5000 -is:retweet within_time:12h</code>
+          <p>寻找4小时内全球范围内最火的原创内容（全语种）</p>
+          <button class="use-btn">使用</button>
+        </div>
+
+        <div class="template-card" data-template="global-5">
+          <h3>12小时英文技术干货</h3>
+          <code>lang:en min_faves:10000 -filter:links within_time:12h</code>
+          <p>锁定12小时内点赞过万的英文技术/干货贴</p>
+          <button class="use-btn">使用</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="custom-tab">
+      <div class="custom-template">
+        <h3>自定义模板</h3>
+        <div class="form-group">
+          <label for="template-name">模板名称:</label>
+          <input type="text" id="template-name" placeholder="例如：我的AI搜索模板">
+        </div>
+        <div class="form-group">
+          <label for="template-query">搜索语法:</label>
+          <textarea id="template-query" placeholder="输入X搜索语法，例如：lang:zh-cn min_faves:500 within_time:4h"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="template-desc">描述:</label>
+          <textarea id="template-desc" placeholder="模板描述"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="template-category">分类:</label>
+          <select id="template-category">
+            <option value="chinese">中文圈</option>
+            <option value="japanese">日区</option>
+            <option value="global">全球/美区</option>
+            <option value="other">其他</option>
+          </select>
+        </div>
+        <button id="save-template">保存模板</button>
+        
+        <div class="saved-templates">
+          <h4>已保存的模板</h4>
+          <div id="custom-templates-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>使用说明</h3>
+      <ol>
+        <li>打开 X/Twitter 网站</li>
+        <li>点击扩展图标打开此面板</li>
+        <li>选择搜索模板，点击"使用"按钮</li>
+        <li>模板会自动填充到搜索框</li>
+        <li>在搜索结果页面选择"Latest"进行筛选</li>
+      </ol>
+    </div>
+
+    <footer>
+      <p>基于原帖"15条找爆款找深度内容的搜索词"开发</p>
+      <p class="version">v1.0.0</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
