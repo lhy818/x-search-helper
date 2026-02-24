@@ -1,0 +1,34 @@
+{
+  "name": "x-search-helper",
+  "version": "1.0.0",
+  "description": "Chrome extension for X/Twitter advanced search templates",
+  "main": "popup.html",
+  "scripts": {
+    "build": "./package.sh",
+    "icons": "python3 create-icons.py",
+    "clean": "rm -rf dist x-search-helper.zip",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "twitter",
+    "x",
+    "search",
+    "templates",
+    "productivity"
+  ],
+  "author": "苦工团队",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhy818/x-search-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lhy818/x-search-helper/issues"
+  },
+  "homepage": "https://github.com/lhy818/x-search-helper#readme",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

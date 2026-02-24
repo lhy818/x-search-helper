@@ -1,8 +1,15 @@
-# X Search Helper - Chrome 扩展
+# 🔍 X Search Helper - Chrome Extension
+
+[![GitHub license](https://img.shields.io/github/license/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/issues)
+[![GitHub forks](https://img.shields.io/github/forks/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/network)
 
 基于原帖"15条找爆款找深度内容的搜索词"开发的 Chrome 扩展，一键使用高级搜索模板，快速找到 X/Twitter 上的爆款内容。
 
-## 功能特性
+🌐 **在线演示**: [GitHub Repository](https://github.com/lhy818/x-search-helper)
+
+## ✨ 特性亮点
 
 ### 🚀 核心功能
 - **15个精选搜索模板**：覆盖中文圈、日区、全球/美区
@@ -10,6 +17,18 @@
 - **自定义关键词**：在模板基础上添加个性化关键词
 - **自定义模板**：保存自己的搜索模板
 - **智能提示**：在搜索结果页面提示选择"Latest"筛选
+
+### 🎨 设计亮点
+- **现代化UI**：紫色渐变主题，响应式设计
+- **流畅交互**：平滑动画和即时反馈
+- **直观分类**：清晰的标签页导航
+- **自动图标**：程序生成的渐变图标
+
+### 🔧 技术优势
+- **Manifest V3**：最新的 Chrome 扩展标准
+- **零依赖**：纯前端实现，无需后端
+- **跨平台**：支持 X.com 和 Twitter.com
+- **数据安全**：所有数据本地存储
 
 ### 📊 模板分类
 1. **中文圈** (5个模板)
@@ -33,18 +52,51 @@
    - 4小时全球最火原创
    - 12小时英文技术干货
 
-## 安装方法
+## 🚀 快速安装
 
-### 开发模式安装
-1. 下载或克隆本项目到本地
-2. 打开 Chrome 浏览器，进入 `chrome://extensions/`
-3. 开启右上角的"开发者模式"
+### 方法一：从 GitHub 安装（推荐）
+```bash
+# 克隆仓库
+git clone https://github.com/lhy818/x-search-helper.git
+cd x-search-helper
+
+# 或者直接下载 ZIP
+# https://github.com/lhy818/x-search-helper/archive/refs/heads/main.zip
+```
+
+### 方法二：Chrome 开发者模式
+1. 下载项目到本地
+2. 打开 Chrome → `chrome://extensions/`
+3. 开启"开发者模式"
 4. 点击"加载已解压的扩展程序"
-5. 选择本项目文件夹
+5. 选择 `x-search-helper` 文件夹
 
-### 生产环境安装
-1. 打包扩展：`zip -r x-search-helper.zip .`
-2. 在 Chrome 应用商店发布（需要开发者账号）
+### 方法三：使用打包版本
+```bash
+# 下载最新发布版本
+# 或运行打包脚本
+./package.sh
+# 然后加载 dist/ 文件夹
+```
+
+## 📱 使用演示
+
+### 基本流程
+```mermaid
+graph LR
+    A[打开 X/Twitter] --> B[点击扩展图标]
+    B --> C[选择模板分类]
+    C --> D[点击使用按钮]
+    D --> E[自动搜索]
+    E --> F[选择 Latest 筛选]
+```
+
+### 模板预览
+| 分类 | 模板数量 | 示例模板 |
+|------|----------|----------|
+| 中文圈 | 5个 | 4小时内高质量热议 |
+| 日区 | 5个 | 1小时刚起飞高赞贴 |
+| 全球/美区 | 5个 | 12小时AI顶级神贴 |
 
 ## 使用说明
 
