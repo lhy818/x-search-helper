@@ -1,13 +1,27 @@
 # 🔍 X Search Helper - Chrome Extension
 
-[![GitHub license](https://img.shields.io/github/license/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/issues)
-[![GitHub forks](https://img.shields.io/github/forks/lhy818/x-search-helper)](https://github.com/lhy818/x-search-helper/network)
+<p align="center">
+  <a href="https://github.com/lhy818/x-search-helper">
+    <img src="https://img.shields.io/github/license/lhy818/x-search-helper" alt="License">
+    <img src="https://img.shields.io/github/stars/lhy818/x-search-helper" alt="Stars">
+    <img src="https://img.shields.io/github/issues/lhy818/x-search-helper" alt="Issues">
+    <img src="https://img.shields.io/github/forks/lhy818/x-search-helper" alt="Forks">
+  </a>
+  <br>
+  <a href="https://github.com/lhy818/x-search-helper/actions">
+    <img src="https://github.com/lhy818/x-search-helper/actions/workflows/build.yml/badge.svg" alt="Build Status">
+  </a>
+  <br>
+  <img src="https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome&logoColor=white" alt="Chrome Extension">
+  <img src="https://img.shields.io/badge/Manifest-V3-green" alt="Manifest V3">
+  <img src="https://img.shields.io/badge/X/Twitter-1DA1F2?logo=twitter&logoColor=white" alt="X/Twitter">
+  <img src="https://img.shields.io/badge/Made%20with-❤️-red" alt="Made with Love">
+</p>
 
 基于原帖"15条找爆款找深度内容的搜索词"开发的 Chrome 扩展，一键使用高级搜索模板，快速找到 X/Twitter 上的爆款内容。
 
-🌐 **在线演示**: [GitHub Repository](https://github.com/lhy818/x-search-helper)
+🌐 **GitHub仓库**: [https://github.com/lhy818/x-search-helper](https://github.com/lhy818/x-search-helper)  
+📦 **最新版本**: [v1.0.0](https://github.com/lhy818/x-search-helper/releases/tag/v1.0.0)
 
 ## ✨ 特性亮点
 
